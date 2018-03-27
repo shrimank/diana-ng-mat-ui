@@ -19,6 +19,9 @@ import { UpgradeComponent } from './upgrade/upgrade.component';
 import { TestSkillComponent } from './test/test.component';
 import { AwsSignature } from './aws/aws-signature';
 import { HttpClientModule } from '@angular/common/http';
+import { UnansweredComponent } from './unanswered/unanswered.component';
+import { ApisComponent } from './apis/apis.component';
+import { ConfigureComponent } from './configure/configure.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +34,10 @@ import { HttpClientModule } from '@angular/common/http';
     MapsComponent,
     NotificationsComponent,
     UpgradeComponent,
-    TestSkillComponent
+    TestSkillComponent,
+    UnansweredComponent,
+    ApisComponent,
+    ConfigureComponent
 
   ],
   imports: [

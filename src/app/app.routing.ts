@@ -12,6 +12,9 @@ import { MapsComponent } from './maps/maps.component';
 import { NotificationsComponent } from './notifications/notifications.component';
 import { UpgradeComponent } from './upgrade/upgrade.component';
 import { TestSkillComponent } from './test/test.component';
+import { ConfigureComponent } from './configure/configure.component';
+import { ApisComponent } from './apis/apis.component';
+import { UnansweredComponent } from './unanswered/unanswered.component';
 
 const routes: Routes =[
     { path: 'dashboard',      component: DashboardComponent },
@@ -22,7 +25,10 @@ const routes: Routes =[
     { path: 'maps',           component: MapsComponent },
     { path: 'notifications',  component: NotificationsComponent },
     { path: 'upgrade',        component: UpgradeComponent },
-    { path:'testSkill',       component: TestSkillComponent},
+    { path: 'testSkill',      component: TestSkillComponent},
+    { path: 'configure',      component: ConfigureComponent},
+    { path: 'apis',           component: ApisComponent},
+    { path: 'uqueries',       component: UnansweredComponent},
     { path: '',               redirectTo: 'dashboard', pathMatch: 'full' }
 ];
 
