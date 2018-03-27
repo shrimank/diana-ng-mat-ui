@@ -1,0 +1,86 @@
+<div class="main-content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header" data-background-color="red">
+                            <h4 class="title">Diana Test Screen</h4>
+                            <p class="category">Testing Diana with Google DialogFlow  and Amazon Lex</p>
+                        </div>
+                        <div class="card-content">
+                            <form [formGroup]="queryForm">
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <div class="form-group form-black label-floating is-empty">
+                                            <label class="control-label">Ask Diana...</label>
+                                            <input type="text" class="form-control" formControlName="query">
+                                            <button type="button" (click)="sendDialogFlow()" 
+                                            class="btn btn-danger pull-right" [disabled]="!this.queryForm.valid">Send</button>
+                                            <!-- <div class="clearfix"></div> -->
+                                        </div>
+                                    </div>
+                                
+                                </div>                                
+                                <div class="row">
+                                        <div class="col-md-6">
+                                                <div class="form-group form-black label-floating is-empty">
+                                                        <!-- <label class="control-label">DialogFlow</label> -->
+                                                        <div style="word-wrap: break-word;color:#EA6F21 ">{{request.apiai}}</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group form-black label-floating is-empty">
+                                                        <!-- <label class="control-label">Alexa</label> -->
+                                                        <div style="word-wrap: break-word;color:#00CAFF">{{request.alexa}}</div>
+                                                    
+                                                </div>
+                                            </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <div class="row">
+
+                <div class="col-md-6">
+                    <div class="card card-profile">
+                        <div class="card-avatar">
+                            <a href="#pablo">
+                                <img class="img" src="https://www.brandeps.com/logo-download/A/Api-ai-01.png" />
+                            </a>
+                        </div>
+        
+                        <div class="content">
+                            <h6 class="category text-gray">Google DialogFlow</h6>
+                            <h4 class="card-title">Response</h4>
+                            <pre style="color:green;text-align:left" *ngIf="response.apiai!==''">
+                               {{response.apiai | json}}
+                            </pre>
+                            <button class="btn btn-danger btn-round" (click)="response.apiai='';request.apiai=''">Clear</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                        <div class="card card-profile">
+                            <div class="card-avatar">
+                                <a href="#pablo">
+                                    <img class="img" src="https://upload.wikimedia.org/wikipedia/commons/c/cc/Amazon_Alexa_App_Logo.png" />
+                                </a>
+                            </div>
+            
+                            <div class="content">
+                                <h6 class="category text-gray">Amazon Lex</h6>
+                                <h4 class="card-title">Response</h4>
+                                <pre style="color:black;text-align:left" *ngIf="response.alexa!==''">
+                                        {{response.alexa |  json}}
+                                </pre>
+                                <button class="btn btn-danger btn-round" (click)="response.alexa='';request.alexa=''">Clear</button>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        </div>
+        
